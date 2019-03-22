@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+            <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="联系人"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+
+                <LinearLayout
+                        android:id="@+id/ll_scrollView_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                            android:id="@+id/ll_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/selector_shape_item"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/common_icon_select"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:text="搜索"
+                                android:textColor="@color/gray"
+                                android:textSize="13sp"/>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_attention"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"/>
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <com.aiitec.contentproviderdemo.widget.WrapRecycleView
+                                android:id="@+id/recycler_contact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <com.aiitec.contentproviderdemo.widget.SideBar
+                android:id="@+id/side_bar"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="?attr/actionBarSize"/>
+
+        <TextView
+                android:id="@+id/tv_contact_select_letter"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_letter_selected_bg"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="@color/black6"
+                android:textSize="24sp"
+                android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

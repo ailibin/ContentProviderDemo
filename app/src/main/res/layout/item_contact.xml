@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+
+    <TextView
+            android:id="@+id/tv_item_contact_letter"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/bg_all"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black6"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_ripple_normal_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp">
+
+        <ImageView
+                android:id="@+id/civ_item_contact_avatar"
+                android:layout_width="@dimen/avatar_width_small"
+                android:layout_height="@dimen/avatar_height_small"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/placeholder_avatar"/>
+
+
+        <TextView
+                android:id="@+id/tv_item_contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="1111111111"
+                android:textColor="@color/black3"
+                android:textSize="15sp"/>
+
+
+    </LinearLayout>
+
+    <View
+            android:id="@+id/line_item"
+            style="@style/vertical_line_style"
+            android:layout_marginLeft="15dp"
+    />
+
+</LinearLayout>

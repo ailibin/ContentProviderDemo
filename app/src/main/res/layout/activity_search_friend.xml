@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+        <EditText
+                android:id="@+id/edt_search"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/search_selector"
+                android:drawableLeft="@drawable/common_icon_select"
+                android:drawablePadding="8dp"
+                android:hint="搜索"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="#999999"
+                android:textSize="13sp"/>
+
+        <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/black3"
+                android:textSize="15sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/ll_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:text="联系人"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black9"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+
+        <View android:id="@+id/include_line"
+              android:layout_marginLeft="10dp"
+              style="@style/vertical_line_style"/>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
