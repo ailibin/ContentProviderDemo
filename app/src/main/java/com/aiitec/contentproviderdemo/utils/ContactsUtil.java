@@ -104,6 +104,7 @@ public class ContactsUtil {
             }
             contacts.add(contact);
         }
+        cursor.close();
         Log.e(TAG, "contacts: " + contacts.toString());
         return contacts;
     }
@@ -135,6 +136,7 @@ public class ContactsUtil {
                     cursor.getString(cursor.getColumnIndex(CONTACT_ID)));
             contacts.add(contact);
         }
+        cursor.close();
         Log.e(TAG, "contacts: " + contacts.toString());
         return contacts;
     }
